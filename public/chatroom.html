@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <script src="/__/firebase/7.14.2/firebase-app.js"></script>
+  <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script  src="/__/firebase/7.14.2/firebase-auth.js"></script>
+  <script  src="/__/firebase/7.14.2/firebase-database.js"></script>
+  <script  src="/__/firebase/7.14.2/firebase-messaging.js"></script>
+  <script  src="/__/firebase/7.14.2/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+
+
+   <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.changer.hk/jquery/plugins/jquery.cookie.js"></script>
+    <script src="http://code.jquery.com/ui/1.7.3/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="chatroom.css">
+
+
+
+  <title> Chatroom </title>
+
+  <!--<style media="screen">
+    body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+    #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+    #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+    #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+    #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+    #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+    #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+    #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+    @media (max-width: 600px) {
+      body, #message { margin-top: 0; background: white; box-shadow: none; }
+      body { border-top: 16px solid #ffa100; }
+    }-->
+  </style>
+  <script src="js/config.js"></script>
+  <script src="js/chatroom.js"></script>
+
+
+</head>
+<body class="foreground">
+  
+    <!--導覽列-->
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href = 'chatroom.html'>
+      <span id = "ID" class="h3 mx-1"> Chatroom </span>
+    </a>
+    <button class="navbar-toggler p-0 border-0" type = "button" data-toggle = "collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded = "false" aria-label="Toggle navigation" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class = "navbar-nav">
+        <a class="nav-link" id = "invite" href="#" onclick = openwindow() >邀請好友<span class="sr-only">(current)</span></a>
+      </div>
+      
+
+    </div>
+  </nav>
+
+  <div class="background">
+  <div class = "midground">
+  
+  
+  <main role="main" class="container">
+        <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+            <img class="mr-3" src="img/bootstrap.svg" alt="" width="48" height="48">
+            <div class="lh-100">
+                <h6 class="mb-0 text-white lh-100">Chatroom</h6>
+                <small>Chatroom</small>
+            </div>
+        </div>
+        <div id="post_list">
+        </div>
+
+        <div class="my-3 p-3 bg-white rounded box-shadow">
+            <h5 class="border-bottom border-gray pb-2 mb-0">New Post</h5>
+
+            <textarea class="form-control" rows="5" id="comment" style="resize:none" ></textarea>
+
+            <div class="media text-muted pt-3">
+                <button id="post_btn" type="button" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+        <div class="tuna"></div>
+    </main>
+    </div>
+    </div>
+    
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+    
+</body>
+
+</html>
